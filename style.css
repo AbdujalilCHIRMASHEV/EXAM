@@ -59,7 +59,7 @@ width: 120%;
 .us_end_card p{font-family: 'Sharp Sans'; font-weight: 400; font-size: 20px; line-height: 25px; align-items: center;}
 .us_card:hover{border: 1px solid rgba(235, 235, 235, 0.5);}
 
-.about_us{margin: 8.3vw 70px 8.3vw 9.3vw; display: flex; align-items: center; justify-content: center;}
+.about_us{margin: 8.3vw 70px 8.3vw 9.3vw; display: flex; align-items: center; justify-content: space-between;}
 .about_rigth{width: 60%;}
 .about_rigth h1{font-family: 'Sharp Sans'; font-weight: 700; font-size: 54px; line-height: 67.5px;color: rgba(21, 20, 20, 1); margin-bottom: 30px;}
 .about_rigth p{font-size: 22px; line-height: 34px; font-family: 'Sharp Sans'; font-weight: 400; color: rgba(24, 29, 25, 1); width: 100%; margin-bottom: 70px;}
@@ -136,6 +136,8 @@ input{border: 1.5px solid rgba(245, 245, 245, 1);border-radius: 165px; padding: 
 
 .end_right2{display: none;}
 
+
+
 @media (max-width:1024px)
 {
 
@@ -145,16 +147,17 @@ input{border: 1.5px solid rgba(245, 245, 245, 1);border-radius: 165px; padding: 
     .navbar{margin:0 0 20px 0; padding: 0 30px 0 70px;}
     .navbar_right2{flex-direction: column;background-color:white;position: absolute;top: 70px; width: 100%;padding: 0 20px; left: 0;
     transition: 0.3s; max-height: 0;overflow: hidden;}
+
     .navbar_right2 p{font-size: 28px;line-height: 35px;}
     .navbar_tool{display:flex ;position: relative;}
-    .navbar_tool img{height: 25px; transition: 0.3s;}
+    .navbar_tool img{height: 25px; transition: 0.3s; }
     .navbar_tool input{position: absolute;top: 0;left: 0;height: 100%;width: 100%;opacity: 0;}
     .navbar_right h1{margin-right: 20px;}
     .navbar:has(input:checked) .navbar_right2{max-height: 100vh;padding: 30px 20px;} 
     .navbar:has(input:checked) .navbar_tool img{transform: rotate(90deg);}
 
     .food{flex-direction: column;margin: 0;}
-    .food_right{width: 90%;align-items: center;text-align: center;}
+    .food_right{width: 50%;align-items: center;text-align: center;}
     .food_right h1{text-align: center;margin-bottom: 20px;}
     .food_right p{width: 90%;margin-bottom: 20px;}
     .food_left{width: 100%;}
@@ -166,20 +169,23 @@ input{border: 1.5px solid rgba(245, 245, 245, 1);border-radius: 165px; padding: 
     .us_col{width: 80%;}
     .us_end{margin-top: 20px;}
     .us_end_card{margin: 0 25px;}
-    .about_us{flex-direction: column;margin-top: 30px;}
+
+    .about_us{margin-top: 30px; flex-direction: column; align-items: flex-start;}
     .about_rigth{width: 100%;text-align: center;}
-    .about_rigth p{width: 100%;margin-bottom: 30px;}
+    .about_rigth p{width: 100%;margin-bottom: 30px; font-size: 17px;}
+
     .about_img{width: 100%; margin-top: 20px;}
     .about_img img{width: 100%; height: auto;}
+    
     .fresh{flex-direction: column;margin: 0;}
-    .fresh_row h1{margin:15px 0;text-align: center;}
-    .fresh_row p{margin-bottom: 20px;text-align: center;}
+    .fresh_row h1{margin:15px 0;text-align: center; width: 90%; font-size: 27px;}
+    .fresh_row p{margin-bottom: 20px;text-align: center; width: 90%; font-size: 24px;}
     .now{width: max-content;}
     .fresh_row{display: flex;flex-direction: column;align-items: center;margin: 0 ;}
     .cooked{flex-direction: column;margin: 20px 30px;}
     .cooked_text h1{width: 100%; text-align: center;margin-bottom: 15px;}
-    .cooked_text>p{text-align: center;margin-bottom: 15px;width: 100%;}
-    .checked{justify-content: center;}
+    .cooked_text>p{text-align: center;margin-bottom: 15px;width: 99%; font-size: 20px;}
+    .checked{margin-left: 5%;}
     .salad_head p{margin-bottom: 15px;}
     .salad_col{flex-direction: column;}
     .salad_card{width: 100%;margin: 0;padding: 0;flex-direction: row;}
@@ -188,12 +194,13 @@ input{border: 1.5px solid rgba(245, 245, 245, 1);border-radius: 165px; padding: 
     .salad_card p{width: auto;}
     .salad_row{margin: 0 calc(9.3vw - 25px) 15px;}
     .salad .now{margin-bottom: 25px;}
-    .says>h1{margin-bottom: 20px;}
+    .says>h1{margin-bottom: 20px; width: 80%; font-size: 30px;}
     .says_row{margin: 0 30px;}
+    #pref {width: 120%;}
     .says_col{flex-direction:column;justify-content: center;align-items: center;}
-    .says_card{width: 100%;padding: 20px;margin: 0;margin-bottom: 10px;}
-    .says_person_img_info img{height: auto;}
-    .says_person_info h1{font-size: 30px;line-height: 40px;}
+    .says_card{width: 100%;padding: 20px;margin: 0;margin-bottom: 10px;  border: 2px solid black;}
+    .says_person_img_info img{width: 90px; height: 100px}
+    .says_person_info h1{font-size: 20px;line-height: 40px;}
     .says_person_info p {font-size: 20px;line-height: 25px;}
     .says_peson{margin-bottom: 25px;}
     .says_card>p {font-size: 20px;line-height: 32px;width: 100%;text-align: center;}
@@ -202,33 +209,43 @@ input{border: 1.5px solid rgba(245, 245, 245, 1);border-radius: 165px; padding: 
     .subscribe p{margin-bottom: 30px;}
     .end{flex-direction: column; margin: 50px 12vw 50px;}
     .end_left{width: 100%; display: flex;flex-direction: column;align-self:center;justify-content:center ;text-align: center;}
-   .end_left p{margin: 15px 0;}
+   .end_left p{font-size: 22px; width: 100%; padding-left: 17%;}
    .end_card{display: flex;flex-direction: column;justify-content: space-between;align-items: center;}
    .end_right h1{margin-bottom: 10px;}
    .end_right p{text-align: center; margin: 0 0 10px 0;}
-   .end_right{display: flex; align-items: center;justify-content: center; gap: 50px;}
+   .end_right{flex-direction: column; align-items: center;justify-content: center; gap: 50px;}
 }
+
 
 @media (max-width:767px){
     .navbar{padding: 0 20px;}
     .navbar_left a{margin: 0;}
     .navbar_left p{ font-size: 18px;line-height: 24px;padding: 10px 20px;}
-    .food_right{width: 100%;}
+    .food_right{width: 80%;}
     .food_right h1, .food_right span{font-size: 47px;line-height: 65px;margin-bottom: 10px;}
     .food_right p{font-size: 18px; line-height: 28px;margin-bottom: 10px;}
-    .now{padding: 15px 30px;}
+    .food_left {
+        width: 77%;
+    }
+    .now{text-align: center; width: 70%;}
     .us_head h1{font-size: 40px;line-height: 50px;margin-bottom: 10px;}
     .us_head p{font-size: 18px;line-height: 25px;margin-bottom: 10px;}
     .us_card h2 {margin-top: 15px;}
-    .us_card{flex-direction: column;}
-    .us_card p{margin-top: 10px;}
-    .us_end_card {margin: 0 10px; width: 33.33%;}
+    .us_card{flex-direction: column; width: 80%;gap: 20px;}
+    .us_card p{margin-top: 10px;} 
+    .us_end {
+        width: 95%;
+    }
+    .us_end_card {margin: 0 10px;}
     .us_end_card h1{margin-bottom: 0;}
     .us_end_card p{font-size: 14px;}
     .about_rigth h1{margin-bottom: 15px;}
-    .about_us{margin: 6.3vw 25px 8.3vw;}
-    .about_rigth p{margin-bottom: 15px;}
-    .fresh img, .cooked_img img{width: 100%;height: auto;}
+
+    .about_us{margin: 6.3vw 25px 8.3vw; width: 88%; flex-direction: column; align-items: flex-start;}
+    .about_rigth p{margin-bottom: 15px; width: 100%;}
+
+    .fresh img {width: 90%;height: auto; margin-left: 6%;}
+    .cooked_img img{width: 100%;height: auto;}
     .cooked {margin: 15px;}
     .salad_head h1{text-align: center;line-height: 60px;font-size: 48px;}
     .salad_head p {text-align: center;font-size: 20px; line-height: 25px;}
@@ -236,8 +253,8 @@ input{border: 1.5px solid rgba(245, 245, 245, 1);border-radius: 165px; padding: 
     .says>h1{margin-bottom: 10px;text-align: center;margin: 0 10px;}
     .arrows_quote{display: none;}
     .says_person_img_info img{width: 50%;}
-    .subscribe h1{text-align: center;}
-    .subscribe p{text-align: center;margin-bottom: 15px;}
+    .subscribe h1{text-align: center; width: 80%;}
+    .subscribe p{text-align: center;margin-bottom: 15px; width: 100%;}
     .email input{ width: 70%;}
     .email{flex-direction: column;gap: 15px;}
     .end_right{display: none;}
@@ -250,4 +267,5 @@ input{border: 1.5px solid rgba(245, 245, 245, 1);border-radius: 165px; padding: 
     .end_right2 p{margin-right: 0;}
     .last{font-size: 13px;}
     .navbar_tool img{height: 20px;}
+
 }
